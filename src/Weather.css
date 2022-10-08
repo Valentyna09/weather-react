@@ -1,0 +1,311 @@
+h1 {
+    color: var(--text-color-first);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.weatherdiv {
+    margin: 30px auto;
+    padding: 50px;
+    border: 3px var(--border-color) solid;
+    border-radius: 40px;
+    background: var(--background-color);
+}
+
+/* HEADER */
+.button {
+    display: block;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button i {
+    color: var(--button-color);
+    text-align: center;
+    font-size: 63px;
+}
+
+.search-form input.city,
+.search-form input.search {
+    border: 1px var(--border-color) solid;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    color: var(--text-color-second);
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    height: 70px;
+}
+
+.search-form input.city {
+    margin-right: 15px;
+    background-color: var(--text-color-first);
+    min-width: 270px;
+}
+
+.search-form input.search {
+    background-color: var(--button-color);
+    min-width: 115px;
+}
+
+/* Current weather */
+.current-weather {
+    margin: 55px auto;
+    border-bottom: 3px var(--text-color-first) solid;
+}
+
+.date {
+    margin-top: 10px;
+    font-size: 25px;
+    text-align: center;
+    color: var(--button-color);
+}
+
+.temperature #tempNow {
+    color: var(--text-color-first);
+    font-size: 110px;
+    font-weight: 500;
+}
+
+.temp-cf {
+    color: var(--text-color-first);
+    font-size: 29px;
+    vertical-align: 54px;
+}
+
+.temp-cf a {
+    color: var(--text-color-second);
+    text-decoration: none;
+}
+
+.temp-cf .active-link {
+    color: var(--button-color-first);
+    cursor: default;
+}
+
+.temp-cf .active-link:hover {
+    text-decoration: none;
+}
+
+.weather-description {
+    color: var(--text-color-first);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1, 5;
+}
+
+.weather-description #main-icon {
+    width: 80px;
+}
+
+.weather-description #sky-now {
+    padding-top: 5px;
+    color: var(--text-color-first);
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: capitalize;
+    vertical-align: -7px;
+}
+
+.weather-description i {
+    margin-right: 34px;
+}
+
+/* Weather cards */
+.div-cards {
+    margin: 20px auto;
+    padding: 0;
+}
+
+.days {
+    margin-bottom: 15px;
+    color: var(--text-color-first);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card {
+    border-radius: 15px;
+    border-color: var(--border-color);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #61B7F5;
+}
+
+.card-body img {
+    margin: -20px auto 0px auto;
+    display: block;
+    width: 100px;
+}
+
+.card-text i.fa-temperature-low {
+    margin-right: 10px;
+    color: var(--text-color-second);
+    font-size: 23px;
+}
+
+.night-temp {
+    margin-right: 5px;
+    color: var(--text-color-second);
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.day-temp {
+    margin-right: 5px;
+    color: var(--text-color-first);
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.celsius {
+    color: var(--text-color-second);
+    font-size: 16px;
+    font-weight: 700;
+    vertical-align: 8px;
+}
+
+.separate {
+    color: var(--text-color-first);
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.card-text i.fa-wind,
+.card-text i.fa-droplet {
+    margin-right: 10px;
+    color: var(--text-color-second);
+    font-size: 23px;
+}
+
+.card-text .wind,
+.card-text .humidity {
+    color: var(--text-color-first);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.units {
+    color: var(--text-color-first);
+    font-size: 20px;
+}
+
+@media (max-width:991px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    .search-form input.search {
+        width: 50vw;
+    }
+
+    .search-div,
+    .location {
+        margin-top: 20px;
+    }
+
+    .temperature {
+        padding: 0;
+        margin-top: 45px;
+    }
+
+    .weather-description {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .card-body {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:768px) {
+    .search-form input.search {
+        width: 46vw;
+    }
+
+    .date {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .current-weather {
+        margin: 20px 0 0 0;
+    }
+
+    .temperature {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .current-weather #tempNow {
+        font-size: 115px;
+    }
+
+    .temp-cf {
+        vertical-align: 58px;
+        font-size: 30px;
+    }
+
+    .weather-description {
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    .current-weather .windHumidity {
+        margin: 0px;
+        font-size: 20px;
+        line-height: 0;
+    }
+
+    .windHumidity .units {
+        font-size: 15px;
+        line-height: 0;
+    }
+
+    .days {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    .card-text {
+        margin: 20px 25px;
+    }
+
+    .card-text i.fa-temperature-low {
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+    .day-temp,
+    .night-temp {
+        margin-right: 5px;
+        font-size: 45px;
+    }
+
+    .celsius {
+        vertical-align: 14px;
+        font-size: 22px;
+    }
+
+    .separate {
+        font-size: 45px;
+    }
+
+    .card-text i.fa-wind,
+    .card-text i.fa-droplet {
+        margin-right: 15px;
+        font-size: 25px;
+    }
+
+    .card-text .wind,
+    .card-text .humidity {
+        font-size: 25px;
+    }
+
+    .units {
+        font-size: 25px;
+    }
+}
