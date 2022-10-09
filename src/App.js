@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity = "Kharkiv"/>
         <p className="author-link">
           <a href="https://github.com/Valentyna09/weather-react">Open-sourse code</a> by Valentyna Rudenko
         </p>
