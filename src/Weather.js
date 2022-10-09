@@ -22,9 +22,9 @@ export default function Weather() {
                                     <input type="submit" value="Search" className="form-control btn btn-primary shadow-sm search" />
                                 </div>
                                 <div className="col-sm-2 col-lg-3 location">
-                                    <a className="button">
+                                    <button className="button">
                                         <i className="fa-solid fa-location-dot" title="Current Location"></i>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -44,8 +44,10 @@ export default function Weather() {
                     <p>
                         <span id="tempNow">28</span>
                         <span className="temp-cf">
-                            <a href="#" id="celsius" className="active-link">℃</a> |
-                            <a href="#" id="fahrenheit">℉</a>
+                            <button id="celsius" className="active-link">℃</button> |
+                            <button id="fahrenheit">℉</button>
+                            {/* <a href="#" id="celsius" className="active-link">℃</a> |
+                            <a href="#" id="fahrenheit">℉</a> */}
                         </span>
                     </p>
                 </div>
@@ -69,7 +71,9 @@ export default function Weather() {
             </div>
 
             {/* <!-- Weather cards  --> */}
-            {/* <div id="weather-forecast-cards"></div> */}
+            <div id="weather-forecast-cards">
+                
+            </div>
         </div>
     );
 }

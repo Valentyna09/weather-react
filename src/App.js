@@ -19,7 +19,10 @@ function App() {
           Learn React
         </a>
       </header> */}
-    <Weather />
+      <Weather />
+      <p className="author-link">
+        <a href="https://github.com/Valentyna09/weather-react">Open-sourse code</a> by Valentyna Rudenko
+      </p>
     </div>
   );
 }

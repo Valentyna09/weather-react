@@ -14,13 +14,11 @@ h1 {
 
 /* HEADER */
 .button {
-    display: block;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
-
-.button:hover {
-    cursor: pointer;
-}
-
 .button i {
     color: var(--button-color);
     text-align: center;
@@ -75,9 +73,14 @@ h1 {
     vertical-align: 54px;
 }
 
-.temp-cf a {
+.temp-cf button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    padding: 0;
     color: var(--text-color-second);
-    text-decoration: none;
 }
 
 .temp-cf .active-link {
