@@ -1,17 +1,19 @@
 // import logo from './logo.svg';
 import React from "react";
-import Weather from "./Weather";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Weather from "./Weather";
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <Weather />
-      <p className="author-link">
-        <a href="https://github.com/Valentyna09/weather-react">Open-sourse code</a> by Valentyna Rudenko
-      </p>
+      <div className="container">
+        <Weather />
+        <p className="author-link">
+          <a href="https://github.com/Valentyna09/weather-react">Open-sourse code</a> by Valentyna Rudenko
+        </p>
+      </div>
     </div>
   );
 }
-
-export default App;

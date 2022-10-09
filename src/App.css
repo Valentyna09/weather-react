@@ -1,0 +1,18 @@
+:root {
+  --background-color: linear-gradient(112.1deg, rgba(98, 184, 246, 1) 11.4%, rgba(44, 121, 193, 1) 70.2%);
+  --border-color: rgba(44, 121, 193, 1);
+  --button-color: #f4e711;
+  --text-color-first: #F2F2F2;
+  --text-color-second: #5a6275;
+}
+
+body {
+  background-color: var(--text-color-first);
+  font-family: "Roboto", sans-serif;
+}
+
+.author-link {
+  color: var(--text-color-second);
+  font-size: 20px;
+  text-align: center;
+}
