@@ -17,6 +17,7 @@ export default function Temperature(props) {
     }
     if (unit === "celsius") {
         return (
+            // Temperature 
             <p>
                 <span id="tempNow">{Math.round(props.celsius)}</span>
                 <span className="temp-cf">

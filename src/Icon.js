@@ -25,13 +25,11 @@ export default function Icon(props) {
     }
     
     return (
-    <ReactAnimatedWeather
-        icon= {iconMap[props.icon]}
-        color= "#F2F2F2"
-        size= {40}
-        animate = {true}
-    />
+        <ReactAnimatedWeather
+            icon= {iconMap[props.icon]}
+            color= "#F2F2F2"
+            size= {50}
+            animate = {true}
+        />
     );
-    
-    // <img src="" alt={props.alt} />;
 }
