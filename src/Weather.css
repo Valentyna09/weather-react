@@ -85,7 +85,7 @@
 }
 .weather-description canvas {
     margin-right: 15px;
-    vertical-align: -20px;
+    vertical-align: -15px;
 }
 .weather-description #sky-now {
     color: var(--text-color-first);
