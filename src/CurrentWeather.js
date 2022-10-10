@@ -1,5 +1,6 @@
 import React from "react";
 import LastUpdate from "./LastUpdate";
+import Icon from "./Icon";
 
 export default function CurrentWeather(props) {
     return (
@@ -26,15 +27,16 @@ export default function CurrentWeather(props) {
 
                 <div className="col-sm-12 col-md-6 col-lg-4 weather-description">
                     <div>
-                        <img src={props.data.icon} alt="clear" id="main-icon" />
-                           <p id="sky-now" className="d-inline">{props.data.description}</p>
+                        <Icon icon={props.data.icon} alt={ props.data.description} />
+                        {/* <img src={props.data.icon} alt="clear" id="main-icon" /> */}
+                        <p id="sky-now" className="d-inline">{props.data.description}</p>
                     </div>
-                    <p className="ms-4">
+                    <p className="ms-2">
                         <i className="fa-solid fa-wind windNow"></i>Wind:
                            <span className="wind-main"> {Math.round(props.data.wind)} </span>
                         <span className="units">km/h</span>
                     </p>
-                    <p className="ms-4">
+                    <p className="ms-2">
                         <i className="fa-solid fa-droplet"></i>Humidity:
                            <span className="humidity-main"> {Math.round(props.data.humidity)} </span>
                         <span className="units">%</span>

@@ -99,10 +99,12 @@ h1 {
     line-height: 1, 5;
 }
 
-.weather-description #main-icon {
+/* .weather-description #main-icon {
     width: 80px;
+} */
+.weather-description canvas {
+    margin-right: 23px;
 }
-
 .weather-description #sky-now {
     padding-top: 5px;
     color: var(--text-color-first);
