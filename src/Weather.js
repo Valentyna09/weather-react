@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './Weather.css';
+import LastUpdate from "./LastUpdate";
 
     // function Submit(event) {
     //     event.preventDefault();
@@ -13,7 +14,8 @@ import './Weather.css';
     // }
 
 export default function Weather(props) {
-    let [weatherData, newWeatherData] = useState({ready:false});
+    let [weatherData, newWeatherData] = useState({ ready: false });
+    
     function weatherForecast(response) {
         console.log(response.data);
         newWeatherData({
@@ -24,7 +26,7 @@ export default function Weather(props) {
             description: response.data.weather[0].description,
             icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             city: response.data.name,
-            date: "Monday 10:00"
+            date: new Date(response.data.dt*1000)
         });
     }
 
@@ -68,7 +70,10 @@ export default function Weather(props) {
                 <div className="col-sm-12 col-lg-4 mt-3">
                        <h1 id="city-name" className="text-center">{weatherData.city}</h1>
                     <p className="date">
-                        Last update: <br/> <span id="currentDayTime">{weatherData.date}</span>
+                           Last update: <br />
+                           <span id="currentDayTime">
+                               <LastUpdate date={ weatherData.date} />
+                           </span>
                     </p>
                 </div>
 
