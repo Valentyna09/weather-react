@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import './Weather.css';
 import CurrentWeather from "./CurrentWeather";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
     let [weatherData, newWeatherData] = useState({ ready: false });
@@ -16,11 +17,12 @@ export default function Weather(props) {
             description: response.data.weather[0].description,
             icon: response.data.weather[0].icon,
             city: response.data.name,
+            coord: response.data.coord,
             date: new Date(response.data.dt*1000)
         });
     }
     function Search() {
-        let key = "f81614abe2395d5dfecd45b9298041de";
+        let key = "f5029b784306910c19746e40c14d6cd3";
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`;
         axios.get(url).then(weatherForecast);
     }
@@ -70,7 +72,7 @@ export default function Weather(props) {
                 <CurrentWeather data={weatherData} />
                 {/* Weather cards */}
                 <div id="weather-forecast-cards">
-                    
+                   <Forecast coordinates={weatherData.coord} />
                 </div>
             </div>
     ); 

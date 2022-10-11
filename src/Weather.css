@@ -121,10 +121,9 @@
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     background-color: #61B7F5;
 }
-.card-body img {
-    margin: -20px auto 0px auto;
+.card-body canvas {
+    margin: 0px auto;
     display: block;
-    width: 100px;
 }
 .card-text i.fa-temperature-low {
     margin-right: 10px;
@@ -222,6 +221,9 @@
     .weather-description {
         padding: 0px;
         margin: 0 auto;
+    }
+    .weather-description #sky-now {
+        font-size: 28px;
     }
     .current-weather .units {
         font-size: 20px;

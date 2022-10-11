@@ -24,7 +24,7 @@ export default function CurrentWeather(props) {
             </div>
             <div className="col-sm-12 col-md-6 col-lg-4 weather-description">
                 <p id="sky-now">
-                    <Icon icon={props.data.icon} alt={props.data.description} /> {props.data.description}
+                    <Icon icon={props.data.icon} size={50} /> {props.data.description}
                 </p>
                 <p className="windNow">
                     <i className="fa-solid fa-wind"></i>Wind:
