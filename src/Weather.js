@@ -21,6 +21,18 @@ export default function Weather(props) {
             date: new Date(response.data.dt*1000)
         });
     }
+
+    function getCurrentPosition(event) {
+        event.preventDefault();
+        navigator.geolocation.getCurrentPosition(currentPosition);
+    }
+
+    function currentPosition(position) {
+        let apiKey = "f5029b784306910c19746e40c14d6cd3";
+        let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
+        axios.get(url).then(weatherForecast);
+    }
+
     function Search() {
         let key = "f5029b784306910c19746e40c14d6cd3";
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`;
@@ -59,7 +71,7 @@ export default function Weather(props) {
                                         <input type="submit" value="Search" className="form-control btn btn-primary shadow-sm search" />
                                     </div>
                                     <div className="col-sm-2 col-lg-3 location">
-                                        <button className="button">
+                                        <button className="button" onClick={getCurrentPosition}>
                                             <i className="fa-solid fa-location-dot" title="Current Location"></i>
                                         </button>
                                     </div>
