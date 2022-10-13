@@ -64,19 +64,6 @@
     font-size: 29px;
     vertical-align: 54px;
 }
-.temp-cf button {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    border: none;
-    color: var(--text-color-second);
-    background-color: transparent;
-    cursor: pointer;
-}
-.temp-cf .active-link {
-    color: var(--button-color-first);
-    cursor: default;
-}
 .weather-description {
     color: var(--text-color-first);
     font-size: 30px;
@@ -250,14 +237,14 @@
     .day-temp,
     .night-temp {
         margin-right: 5px;
-        font-size: 45px;
+        font-size: 38px;
     }
     .celsius {
         vertical-align: 14px;
-        font-size: 22px;
+        font-size: 18px;
     }
     .separate {
-        font-size: 45px;
+        font-size: 38px;
     }
     .card-text i.fa-wind,
     .card-text i.fa-droplet {
