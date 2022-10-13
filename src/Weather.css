@@ -209,6 +209,9 @@
         margin-top: 10px;
         text-align: center;
     }
+    .current-weather h1 {
+        font-size: 58px;
+    }
     .temperature {
         margin-top: 10px;
         text-align: center;
@@ -223,6 +226,9 @@
     .weather-description {
         padding: 0px;
         margin: 0 auto;
+    }
+    .weather-description canvas {
+        margin-right: 13px;
     }
     .weather-description #sky-now {
         font-size: 28px;
